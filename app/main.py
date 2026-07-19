@@ -1,11 +1,12 @@
 from fastapi import FastAPI
+from fastapi.responses import HTMLResponse
 
 from app.api.routes import router
-from fastapi import FastAPI
 
 app = FastAPI(title="NetAssist")
 
-from fastapi.responses import HTMLResponse
+# Register all API routes
+app.include_router(router)
 
 @app.get("/", response_class=HTMLResponse)
 async def home():
