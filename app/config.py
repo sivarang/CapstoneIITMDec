@@ -1,0 +1,17 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+print(OPENAI_API_KEY)
+LANGSMITH_API_KEY = os.getenv("LANGSMITH_API_KEY")
+
+LANGSMITH_TRACING = os.getenv("LANGSMITH_TRACING")
+
+LANGSMITH_PROJECT = os.getenv("LANGSMITH_PROJECT")
+
+print(LANGSMITH_TRACING, LANGSMITH_PROJECT)
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+
+PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME")
