@@ -1,10 +1,15 @@
 from fastapi import FastAPI
 
 from app.api.routes import router
+from fastapi import FastAPI
 
-app = FastAPI(
-    title="Router Support Agent",
-    version="1.0"
-)
+app = FastAPI(title="NetAssist")
 
-app.include_router(router)
+@app.get("/")
+def root():
+    return {
+        "application": "NetAssist",
+        "company": "CAPSTONEFinal",
+        "status": "Running",
+        "docs": "/docs"
+    }
