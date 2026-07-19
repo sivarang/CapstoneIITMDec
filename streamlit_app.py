@@ -6,7 +6,7 @@ import streamlit as st
 # Configuration
 # ======================================================
 
-API_URL = "https://capstoneiitmdec.onrender.com"
+API_URL = "https://capstoneiitmdec.onrender.com/chat"
 
 st.set_page_config(
     page_title="NetAssist",
