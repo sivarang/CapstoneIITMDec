@@ -16,11 +16,17 @@ def chat(request: ChatRequest):
 
     session_id = request.session_id or str(uuid4())
 
-    config = {
-        "configurable": {
-            "thread_id": session_id
+    result = graph.invoke(
+        state,
+        config={
+            "configurable": {
+                "thread_id": session_id
+            }
         }
-    }
+    )
+
+    print("Returned State:")
+    print(result)
 
     #session_id = request.session_id or str(uuid4())
 
